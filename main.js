@@ -15,7 +15,6 @@ const setDate = () => {
   const minutes = moment.getMinutes();
   const minuteDegress = (minutes / 60) * 360 + 90;
   minuteHand.style.transform = `rotate(${minuteDegress}deg)`;
-  console.log(seconds);
 
   const hours = moment.getHours();
   const hoursDegress = (hours / 12) * 360 + 90;
