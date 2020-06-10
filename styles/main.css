@@ -16,6 +16,8 @@ body {
 }
 
 .clock {
+  display: flex;
+  justify-content: center;
   width: 30rem;
   height: 30rem;
   border: 20px solid white;
@@ -27,9 +29,10 @@ body {
 }
 
 .clock-face {
+  align-self: center;
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   transform: translateY(-3px); /* account for the height of the clock hands */
 }
 
@@ -39,4 +42,19 @@ body {
   background: black;
   position: absolute;
   top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.second-hand {
+  background: red;
+}
+
+.min-hand {
+  height: 5px;
+}
+
+.hour-hand {
+  height: 3px;
 }
